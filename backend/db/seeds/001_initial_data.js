@@ -111,7 +111,7 @@ exports.seed = async function (knex) {
 
   const questions = [
     {
-      theory_id: 'kolb', order_num: 1,
+      id: 'kolb-q01', theory_id: 'kolb', order_num: 1,
       stem: JSON.stringify({ zh: '学到一个新概念时，我通常会：', en: 'When I encounter a new concept, I usually:', ja: '新しい概念に出会ったとき、私は通常：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '凭借以往类似的经历来理解它', en: 'Relate it to similar experiences I have had', ja: '以前の似た経験と関連付けて理解しようとする' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -121,7 +121,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 2,
+      id: 'kolb-q02', theory_id: 'kolb', order_num: 2,
       stem: JSON.stringify({ zh: '面对一个从未见过的难题，我倾向于：', en: 'When facing a problem I have never seen before, I tend to:', ja: 'これまでに見たことのない難問に直面したとき、私は：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '凭直觉和经验先做出判断', en: 'Make a judgment based on my intuition and experience first', ja: '直感と経験をもとにまず判断を下す' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -131,7 +131,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 3,
+      id: 'kolb-q03', theory_id: 'kolb', order_num: 3,
       stem: JSON.stringify({ zh: '在小组合作学习中，我通常扮演的角色是：', en: 'In group collaborative learning, my usual role is:', ja: 'グループ学習での私の通常の役割は：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '活跃气氛、分享个人经历与感受', en: 'Energize the group and share personal experiences and feelings', ja: '場を盛り上げ、個人的な経験や感情を共有する' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -141,7 +141,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 4,
+      id: 'kolb-q04', theory_id: 'kolb', order_num: 4,
       stem: JSON.stringify({ zh: '评价一种学习方法好不好，我最看重：', en: 'When evaluating a learning method, I care most about whether it:', ja: '学習方法を評価するとき、私が最も重視するのは：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '能调动情感投入，让我有真实的参与感', en: 'Engages my emotions and gives me a genuine sense of involvement', ja: '感情的な関与を促し、本当の参加感があるかどうか' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -151,7 +151,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 5,
+      id: 'kolb-q05', theory_id: 'kolb', order_num: 5,
       stem: JSON.stringify({ zh: '开始学习一门新课程时，我通常会：', en: 'When starting a new course, I usually:', ja: '新しい授業を始めるとき、私は通常：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '寻找与自己生活经验相关的切入点', en: 'Look for connections to my own life experiences', ja: '自分の生活経験と関連する切り口を探す' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -161,7 +161,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 6,
+      id: 'kolb-q06', theory_id: 'kolb', order_num: 6,
       stem: JSON.stringify({ zh: '学习过程中遇到困惑时，我首选的方式是：', en: 'When I get confused during learning, my preferred approach is:', ja: '学習中に困惑したとき、私が好む方法は：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '向有亲身经验的人请教，结合实例理解', en: 'Ask someone with hands-on experience and learn through examples', ja: '実体験のある人に聞き、具体例を通じて理解する' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -171,7 +171,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 7,
+      id: 'kolb-q07', theory_id: 'kolb', order_num: 7,
       stem: JSON.stringify({ zh: '当学到的内容与我原来的理解不符时，我会：', en: 'When what I have learned conflicts with my prior understanding, I:', ja: '学んだ内容が以前の理解と一致しないとき、私は：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '回想自己是否有类似的亲身经历可以参照', en: 'Recall whether I have similar personal experiences to draw on', ja: '類似した体験が自分にないか思い返す' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -181,7 +181,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 8,
+      id: 'kolb-q08', theory_id: 'kolb', order_num: 8,
       stem: JSON.stringify({ zh: '回顾一次学习经历，我最在意的是：', en: 'When reflecting on a learning experience, what I care about most is:', ja: '学習経験を振り返るとき、私が最も気にするのは：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '这次经历给我留下了什么感受和印象', en: 'What feelings and impressions this experience left on me', ja: 'その経験が残してくれた感覚や印象' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -191,7 +191,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 9,
+      id: 'kolb-q09', theory_id: 'kolb', order_num: 9,
       stem: JSON.stringify({ zh: '最能让我进入学习状态的环境是：', en: 'The environment that best gets me into a learning state is:', ja: '最も学習状態に入りやすい環境は：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '有互动、气氛活跃、大家能互相分享', en: 'Interactive and lively, where people share with each other', ja: 'インタラクティブで活気があり、互いに共有できる場' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -201,7 +201,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 10,
+      id: 'kolb-q10', theory_id: 'kolb', order_num: 10,
       stem: JSON.stringify({ zh: '做完一项学习任务后，我通常会：', en: 'After completing a learning task, I typically:', ja: '学習課題を終えた後、私は通常：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '和别人聊聊这次的体验和感想', en: 'Talk to someone about the experience and my thoughts', ja: 'その体験や感想について誰かと話す' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -211,7 +211,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 11,
+      id: 'kolb-q11', theory_id: 'kolb', order_num: 11,
       stem: JSON.stringify({ zh: '老师用多种方式讲同一个知识点时，我最容易接受的是：', en: 'When a teacher presents the same concept in multiple ways, I find it easiest to learn through:', ja: '教師が同じ内容を複数の方法で提示したとき、最も理解しやすいのは：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '生动的故事、案例或现实生活中的例子', en: 'Vivid stories, cases, or real-life examples', ja: '生き生きとしたストーリー、事例、または実生活の例' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -221,7 +221,7 @@ exports.seed = async function (knex) {
       ])
     },
     {
-      theory_id: 'kolb', order_num: 12,
+      id: 'kolb-q12', theory_id: 'kolb', order_num: 12,
       stem: JSON.stringify({ zh: '我认为最理想的学习成果是：', en: 'I believe the most ideal learning outcome is:', ja: '最も理想的な学習成果は：' }),
       options: JSON.stringify([
         { key: 'A', text: { zh: '形成了个人独到的体验和感悟', en: 'Having formed personal, unique insights and experiences', ja: '個人的な独自の洞察と経験が形成されたこと' }, scores: { CE: 3, RO: 0, AC: 0, AE: 0 } },
@@ -233,6 +233,7 @@ exports.seed = async function (knex) {
   ]
 
   await knex('questions').insert(questions.map(q => ({
+    id: q.id,
     theory_id: q.theory_id,
     order_num: q.order_num,
     stem: q.stem,

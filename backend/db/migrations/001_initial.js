@@ -17,7 +17,7 @@ exports.up = function (knex) {
       t.text('suggestions').notNullable() // JSON array of {zh,en,ja}
     })
     .createTable('questions', t => {
-      t.increments('id')
+      t.string('id').primary()
       t.string('theory_id').notNullable().references('id').inTable('theories')
       t.integer('order_num').notNullable()
       t.text('stem').notNullable()    // JSON {zh,en,ja}
