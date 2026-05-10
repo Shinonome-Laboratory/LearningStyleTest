@@ -1,8 +1,17 @@
-# LearningStyleTest · 学习风格测评系统
+<div align="center">
+
+# LearningStyleTest
+
+**[中文](#中文) &nbsp;|&nbsp; [English](#english) &nbsp;|&nbsp; [日本語](#日本語)**
+
+</div>
 
 ---
 
+<a id="中文"></a>
 ## 中文
+
+<div align="right"><a href="#learningstylettest">⬆ 回到顶部</a></div>
 
 ### 项目简介
 
@@ -23,8 +32,8 @@
 
 ### 环境要求
 
-- **Node.js 18+**（[下载地址](https://nodejs.org)）
-- **Python 3.8+**（[下载地址](https://python.org)）
+- **Node.js 18+** — https://nodejs.org
+- **Python 3.8+** — https://python.org
 
 ### 一键配置环境（首次使用）
 
@@ -32,15 +41,13 @@
 python setup.py
 ```
 
-脚本将自动完成：后端依赖安装 → 数据库初始化（迁移 + 种子数据）→ 前端依赖安装。
+自动完成：后端依赖安装 → 数据库初始化 → 前端依赖安装。
 
 ### 一键启动
 
 ```bash
 python start.py
 ```
-
-服务启动后将自动打开浏览器，也可手动访问：
 
 | 页面 | 地址 |
 |---|---|
@@ -56,32 +63,34 @@ python start.py
 | 初始密码 | `admin123` |
 | 修改入口 | 管理控制台 → 设置 → 修改密码 |
 
-> **请在首次登录后立即修改密码。**
+> ⚠️ 请在首次登录后立即修改密码。
 
 ### 目录结构
 
 ```
 code/
-├── setup.py          # 一键环境配置
-├── start.py          # 一键启动
+├── setup.py              # 一键环境配置
+├── start.py              # 一键启动
 ├── backend/
-│   ├── index.js      # Express 入口
-│   ├── routes/       # API 路由
-│   ├── db/           # 迁移 & 种子数据
-│   ├── Userdata/     # CSV 持久化备份
-│   └── scripts/      # 辅助脚本
+│   ├── index.js          # Express 入口
+│   ├── routes/           # API 路由
+│   ├── db/               # 迁移 & 种子数据
+│   ├── Userdata/         # CSV 持久化备份（.gitignore 已排除）
+│   └── scripts/          # 辅助脚本
 └── frontend/
-    ├── src/
-    │   ├── views/    # 页面组件
-    │   ├── components/
-    │   ├── stores/   # Pinia 状态管理
-    │   └── i18n/     # 三语言翻译文件
-    └── vite.config.js
+    └── src/
+        ├── views/        # 页面组件
+        ├── components/   # 通用组件
+        ├── stores/       # Pinia 状态管理
+        └── i18n/         # 三语言翻译文件
 ```
 
 ---
 
+<a id="english"></a>
 ## English
+
+<div align="right"><a href="#learningstylettest">⬆ Back to top</a></div>
 
 ### Overview
 
@@ -102,8 +111,8 @@ An online learning style assessment tool based on **Kolb's Experiential Learning
 
 ### Requirements
 
-- **Node.js 18+** ([download](https://nodejs.org))
-- **Python 3.8+** ([download](https://python.org))
+- **Node.js 18+** — https://nodejs.org
+- **Python 3.8+** — https://python.org
 
 ### One-click Setup (first time only)
 
@@ -111,15 +120,13 @@ An online learning style assessment tool based on **Kolb's Experiential Learning
 python setup.py
 ```
 
-This will automatically: install backend dependencies → initialize the database (migrations + seed data) → install frontend dependencies.
+Automatically: installs backend dependencies → initializes database → installs frontend dependencies.
 
 ### One-click Start
 
 ```bash
 python start.py
 ```
-
-The browser opens automatically. You can also navigate manually:
 
 | Page | URL |
 |---|---|
@@ -135,32 +142,34 @@ Press `Ctrl+C` to stop all services.
 | Default password | `admin123` |
 | Change password | Admin console → Settings → Change Password |
 
-> **Please change the password immediately after your first login.**
+> ⚠️ Please change the password immediately after your first login.
 
 ### Directory Structure
 
 ```
 code/
-├── setup.py          # One-click environment setup
-├── start.py          # One-click launch
+├── setup.py              # One-click environment setup
+├── start.py              # One-click launch
 ├── backend/
-│   ├── index.js      # Express entry point
-│   ├── routes/       # API routes
-│   ├── db/           # Migrations & seed data
-│   ├── Userdata/     # CSV persistence backup
-│   └── scripts/      # Utility scripts
+│   ├── index.js          # Express entry point
+│   ├── routes/           # API routes
+│   ├── db/               # Migrations & seed data
+│   ├── Userdata/         # CSV persistence backup (excluded via .gitignore)
+│   └── scripts/          # Utility scripts
 └── frontend/
-    ├── src/
-    │   ├── views/    # Page components
-    │   ├── components/
-    │   ├── stores/   # Pinia state management
-    │   └── i18n/     # Trilingual translation files
-    └── vite.config.js
+    └── src/
+        ├── views/        # Page components
+        ├── components/   # Shared components
+        ├── stores/       # Pinia state management
+        └── i18n/         # Trilingual translation files
 ```
 
 ---
 
+<a id="日本語"></a>
 ## 日本語
+
+<div align="right"><a href="#learningstylettest">⬆ トップへ戻る</a></div>
 
 ### プロジェクト概要
 
@@ -181,8 +190,8 @@ code/
 
 ### 動作環境
 
-- **Node.js 18+**（[ダウンロード](https://nodejs.org)）
-- **Python 3.8+**（[ダウンロード](https://python.org)）
+- **Node.js 18+** — https://nodejs.org
+- **Python 3.8+** — https://python.org
 
 ### ワンクリック環境構築（初回のみ）
 
@@ -190,15 +199,13 @@ code/
 python setup.py
 ```
 
-スクリプトが自動的に実行します：バックエンド依存関係のインストール → データベースの初期化（マイグレーション + シードデータ）→ フロントエンド依存関係のインストール。
+自動的に実行されます：バックエンド依存関係のインストール → データベースの初期化 → フロントエンド依存関係のインストール。
 
 ### ワンクリック起動
 
 ```bash
 python start.py
 ```
-
-起動後、ブラウザが自動的に開きます。手動でアクセスする場合は以下のURLを使用してください：
 
 | ページ | URL |
 |---|---|
@@ -214,25 +221,24 @@ python start.py
 | 初期パスワード | `admin123` |
 | 変更場所 | 管理コンソール → 設定 → パスワード変更 |
 
-> **初回ログイン後、すぐにパスワードを変更してください。**
+> ⚠️ 初回ログイン後、すぐにパスワードを変更してください。
 
 ### ディレクトリ構成
 
 ```
 code/
-├── setup.py          # ワンクリック環境構築
-├── start.py          # ワンクリック起動
+├── setup.py              # ワンクリック環境構築
+├── start.py              # ワンクリック起動
 ├── backend/
-│   ├── index.js      # Express エントリーポイント
-│   ├── routes/       # API ルート
-│   ├── db/           # マイグレーション & シードデータ
-│   ├── Userdata/     # CSV 永続化バックアップ
-│   └── scripts/      # ユーティリティスクリプト
+│   ├── index.js          # Express エントリーポイント
+│   ├── routes/           # API ルート
+│   ├── db/               # マイグレーション & シードデータ
+│   ├── Userdata/         # CSV 永続化バックアップ（.gitignore で除外済み）
+│   └── scripts/          # ユーティリティスクリプト
 └── frontend/
-    ├── src/
-    │   ├── views/    # ページコンポーネント
-    │   ├── components/
-    │   ├── stores/   # Pinia 状態管理
-    │   └── i18n/     # 3言語翻訳ファイル
-    └── vite.config.js
+    └── src/
+        ├── views/        # ページコンポーネント
+        ├── components/   # 共通コンポーネント
+        ├── stores/       # Pinia 状態管理
+        └── i18n/         # 3言語翻訳ファイル
 ```
