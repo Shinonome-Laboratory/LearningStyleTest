@@ -5,8 +5,8 @@ node_modules/
 backend/db/*.sqlite3
 backend/db/*.sqlite
 
-# Student data (contains personal information)
-backend/Userdata/
+# Student data — uncomment to exclude real respondent data before publishing
+# backend/Userdata/
 
 # Frontend build output
 frontend/dist/
