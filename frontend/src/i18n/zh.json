@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "title": "学习风格测评"
+  },
+  "lang": {
+    "zh": "中文",
+    "en": "English",
+    "ja": "日本語"
+  },
+  "test": {
+    "selectTheory": "选择测评理论",
+    "next": "下一步",
+    "startTest": "开始测试",
+    "submit": "提交",
+    "retake": "再测一次",
+    "progress": "第 {current} / 共 {total} 题",
+    "fillInfo": "请填写基本信息",
+    "required": "此项为必填项",
+    "fillAll": "请填写完整信息",
+    "steps": {
+      "info": "填写信息",
+      "quiz": "答题",
+      "result": "查看结果"
+    },
+    "result": {
+      "yourType": "你的学习类型",
+      "traits": "你的特点",
+      "suggestions": "学习建议",
+      "axis": {
+        "abstract": "抽象",
+        "concrete": "具体",
+        "active": "主动",
+        "reflective": "反思",
+        "assimilating": "同化型",
+        "converging": "聚合型",
+        "diverging": "发散型",
+        "accommodating": "适应型",
+        "you": "你"
+      }
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "研究者登录",
+      "password": "密码",
+      "submit": "登录",
+      "wrongPassword": "密码错误，请重试",
+      "logout": "退出登录"
+    },
+    "tabs": {
+      "questions": "题目管理",
+      "data": "数据",
+      "stats": "统计",
+      "settings": "设置"
+    },
+    "theories": {
+      "add": "新增理论",
+      "edit": "编辑理论",
+      "delete": "删除理论",
+      "confirmDelete": "确认删除该理论及其所有题目？",
+      "id": "理论 ID（字母/数字/连字符）",
+      "idPlaceholder": "如：vark 或 honey-mumford",
+      "name": "理论名称",
+      "dimensions": "维度代码（逗号分隔）",
+      "dimensionsPlaceholder": "如：V,A,R,K",
+      "axes": "坐标轴配置",
+      "axisName": "轴变量名",
+      "axisFormula": "计算公式",
+      "axisFormulaPlaceholder": "如：AC - CE",
+      "axisLabel": "轴标签",
+      "addAxis": "+ 添加坐标轴",
+      "types": "学习类型（每行一个 ID）",
+      "typesPlaceholder": "如：\ntype-a\ntype-b\ntype-c\ntype-d",
+      "idExists": "理论 ID 已存在",
+      "idInvalid": "ID 只能包含字母、数字和连字符"
+    },
+    "questions": {
+      "theory": "选择理论",
+      "add": "新增题目",
+      "edit": "编辑",
+      "delete": "删除",
+      "confirmDelete": "确认删除此题目？",
+      "stem": "题目题干",
+      "options": "选项",
+      "optionKey": "选项",
+      "optionText": "选项文字",
+      "scores": "维度分值",
+      "save": "保存",
+      "cancel": "取消",
+      "stemLang": "题干（{lang}）",
+      "optionLang": "选项文字（{lang}）"
+    },
+    "data": {
+      "name": "姓名/信息",
+      "type": "学习类型",
+      "acce": "AC-CE",
+      "aero": "AE-RO",
+      "time": "测评时间",
+      "lang": "语言",
+      "rawScores": "原始分值",
+      "vector": "数值序列",
+      "copy": "复制",
+      "copied": "已复制",
+      "answers": "答题详情",
+      "exportAll": "导出全部",
+      "downloadRecord": "下载此记录",
+      "deleteRecord": "删除记录",
+      "confirmDeleteRecord": "确认删除此条记录？"
+    },
+    "stats": {
+      "title": "学员分布统计",
+      "filter": "批次筛选",
+      "all": "全部",
+      "clickTip": "点击任意点查看该学生详情",
+      "total": "共 {n} 人",
+      "distribution": "类型分布"
+    },
+    "settings": {
+      "infoFields": "信息字段配置",
+      "addField": "添加字段",
+      "fieldName": "字段名称",
+      "fieldType": "类型",
+      "required": "必填",
+      "text": "文本",
+      "number": "数字",
+      "password": "修改密码",
+      "newPassword": "新密码",
+      "confirmPassword": "确认新密码",
+      "savePassword": "保存密码",
+      "saveFields": "保存字段配置",
+      "passwordMismatch": "两次密码不一致",
+      "savedSuccess": "保存成功"
+    }
+  },
+  "common": {
+    "confirm": "确认",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "loading": "加载中..."
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "title": "Learning Style Test"
+  },
+  "lang": {
+    "zh": "中文",
+    "en": "English",
+    "ja": "日本語"
+  },
+  "test": {
+    "selectTheory": "Select Theory",
+    "next": "Next",
+    "startTest": "Start Test",
+    "submit": "Submit",
+    "retake": "Take Again",
+    "progress": "Question {current} of {total}",
+    "fillInfo": "Please fill in your information",
+    "required": "This field is required",
+    "fillAll": "Please complete all required fields",
+    "steps": {
+      "info": "Your Info",
+      "quiz": "Quiz",
+      "result": "Results"
+    },
+    "result": {
+      "yourType": "Your Learning Style",
+      "traits": "Your Traits",
+      "suggestions": "Learning Suggestions",
+      "axis": {
+        "abstract": "Abstract",
+        "concrete": "Concrete",
+        "active": "Active",
+        "reflective": "Reflective",
+        "assimilating": "Assimilating",
+        "converging": "Converging",
+        "diverging": "Diverging",
+        "accommodating": "Accommodating",
+        "you": "You"
+      }
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "Researcher Login",
+      "password": "Password",
+      "submit": "Login",
+      "wrongPassword": "Wrong password, please try again",
+      "logout": "Logout"
+    },
+    "tabs": {
+      "questions": "Questions",
+      "data": "Data",
+      "stats": "Statistics",
+      "settings": "Settings"
+    },
+    "theories": {
+      "add": "Add Theory",
+      "edit": "Edit Theory",
+      "delete": "Delete Theory",
+      "confirmDelete": "Delete this theory and all its questions?",
+      "id": "Theory ID (letters/numbers/hyphens)",
+      "idPlaceholder": "e.g.: vark or honey-mumford",
+      "name": "Theory Name",
+      "dimensions": "Dimension codes (comma-separated)",
+      "dimensionsPlaceholder": "e.g.: V,A,R,K",
+      "axes": "Axis Configuration",
+      "axisName": "Axis variable name",
+      "axisFormula": "Formula",
+      "axisFormulaPlaceholder": "e.g.: AC - CE",
+      "axisLabel": "Axis label",
+      "addAxis": "+ Add Axis",
+      "types": "Learning types (one ID per line)",
+      "typesPlaceholder": "e.g.:\ntype-a\ntype-b\ntype-c\ntype-d",
+      "idExists": "Theory ID already exists",
+      "idInvalid": "ID may only contain letters, numbers and hyphens"
+    },
+    "questions": {
+      "theory": "Select Theory",
+      "add": "Add Question",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirmDelete": "Confirm delete this question?",
+      "stem": "Question Stem",
+      "options": "Options",
+      "optionKey": "Option",
+      "optionText": "Option Text",
+      "scores": "Dimension Scores",
+      "save": "Save",
+      "cancel": "Cancel",
+      "stemLang": "Stem ({lang})",
+      "optionLang": "Option text ({lang})"
+    },
+    "data": {
+      "name": "Name/Info",
+      "type": "Learning Type",
+      "acce": "AC-CE",
+      "aero": "AE-RO",
+      "time": "Date",
+      "lang": "Language",
+      "rawScores": "Raw Scores",
+      "vector": "Numeric Vector",
+      "copy": "Copy",
+      "copied": "Copied",
+      "answers": "Answer Details",
+      "exportAll": "Export All",
+      "downloadRecord": "Download Record",
+      "deleteRecord": "Delete Record",
+      "confirmDeleteRecord": "Confirm delete this record?"
+    },
+    "stats": {
+      "title": "Learner Distribution",
+      "filter": "Filter",
+      "all": "All",
+      "clickTip": "Click any point to view student details",
+      "total": "{n} respondents",
+      "distribution": "Type Distribution"
+    },
+    "settings": {
+      "infoFields": "Info Field Configuration",
+      "addField": "Add Field",
+      "fieldName": "Field Name",
+      "fieldType": "Type",
+      "required": "Required",
+      "text": "Text",
+      "number": "Number",
+      "password": "Change Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "savePassword": "Save Password",
+      "saveFields": "Save Fields",
+      "passwordMismatch": "Passwords do not match",
+      "savedSuccess": "Saved successfully"
+    }
+  },
+  "common": {
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "loading": "Loading..."
+  }
+}
