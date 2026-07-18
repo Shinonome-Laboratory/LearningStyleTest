@@ -460,11 +460,3 @@ LearningStyleTest/
 ```
 
 </details>
-
----
-
-<h2 align="center">👥 Contributors</h2>
-<p align="center">
-  <a href="https://github.com/Shinonome-Laboratory"><strong>Hakase Shinonome</strong></a> — project owner & research design<br>
-  <strong>Claude (Anthropic)</strong> — Vibe Coding assistant
-</p>
