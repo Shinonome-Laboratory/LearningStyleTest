@@ -129,7 +129,8 @@
       "savePassword": "保存密码",
       "saveFields": "保存字段配置",
       "passwordMismatch": "两次密码不一致",
-      "savedSuccess": "保存成功"
+      "savedSuccess": "保存成功",
+      "passwordTooShort": "密码至少需要 6 位"
     }
   },
   "common": {

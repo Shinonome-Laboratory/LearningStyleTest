@@ -69,19 +69,25 @@ export const useTestStore = defineStore('test', {
     // ja: アンケートを提出して結果を取得する
     async submit() {
       this.loading = true
+      // zh: question_id 是字符串主键（如 kolb-q01），不可 parseInt
+      // en: question_id is a string primary key (e.g. kolb-q01) — never parseInt it
+      // ja: question_id は文字列主キー（例: kolb-q01）のため parseInt してはいけない
       const answers = Object.entries(this.answers).map(([question_id, option_key]) => ({
-        question_id: parseInt(question_id),
+        question_id,
         option_key
       }))
-      const { data } = await axios.post('/api/respondents', {
-        theory_id: this.selectedTheory,
-        lang: this.lang,
-        info: this.infoValues,
-        answers
-      })
-      this.result = data
-      this.step = 3
-      this.loading = false
+      try {
+        const { data } = await axios.post('/api/respondents', {
+          theory_id: this.selectedTheory,
+          lang: this.lang,
+          info: this.infoValues,
+          answers
+        })
+        this.result = data
+        this.step = 3
+      } finally {
+        this.loading = false
+      }
     },
 
     // zh: 重置状态，重新开始测试

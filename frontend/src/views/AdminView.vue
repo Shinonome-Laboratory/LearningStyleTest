@@ -226,7 +226,7 @@
               <el-form-item :label="t('admin.settings.confirmPassword')">
                 <el-input v-model="confirmPwd" type="password" show-password />
               </el-form-item>
-              <p v-if="pwdError" class="error">{{ t('admin.settings.passwordMismatch') }}</p>
+              <p v-if="pwdError" class="error">{{ t(`admin.settings.${pwdError}`) }}</p>
               <el-button type="primary" @click="savePwd">{{ t('admin.settings.savePassword') }}</el-button>
             </el-form>
           </div>
@@ -337,16 +337,23 @@ const theoryIdError = ref('')
 const editableFields = ref([])
 const newPwd = ref('')
 const confirmPwd = ref('')
-const pwdError = ref(false)
+const pwdError = ref('')  // '' | 'passwordMismatch' | 'passwordTooShort'
+
+// zh: 四个接口互不依赖，并行加载
+// en: The four requests are independent — load them in parallel
+// ja: 4つのリクエストは独立しているため並列で読み込む
+async function loadAll() {
+  await Promise.all([
+    store.loadTheories(),
+    store.loadQuestions(),
+    store.loadRespondents(),
+    store.loadInfoFields()
+  ])
+  editableFields.value = JSON.parse(JSON.stringify(store.infoFields))
+}
 
 onMounted(async () => {
-  if (store.isLoggedIn) {
-    await store.loadTheories()
-    await store.loadQuestions()
-    await store.loadRespondents()
-    await store.loadInfoFields()
-    editableFields.value = JSON.parse(JSON.stringify(store.infoFields))
-  }
+  if (store.isLoggedIn) await loadAll()
 })
 
 function switchLang(l) {
@@ -358,15 +365,12 @@ async function doLogin() {
   loginLoading.value = true
   try {
     await store.login(password.value)
-    await store.loadTheories()
-    await store.loadQuestions()
-    await store.loadRespondents()
-    await store.loadInfoFields()
-    editableFields.value = JSON.parse(JSON.stringify(store.infoFields))
+    await loadAll()
   } catch {
     loginError.value = true
+  } finally {
+    loginLoading.value = false
   }
-  loginLoading.value = false
 }
 
 async function onTabChange(tab) {
@@ -474,8 +478,9 @@ async function saveFields() {
 }
 
 async function savePwd() {
-  if (newPwd.value !== confirmPwd.value) { pwdError.value = true; return }
-  pwdError.value = false
+  if (newPwd.value !== confirmPwd.value) { pwdError.value = 'passwordMismatch'; return }
+  if (newPwd.value.length < 6) { pwdError.value = 'passwordTooShort'; return }
+  pwdError.value = ''
   await store.changePassword(newPwd.value)
   newPwd.value = ''
   confirmPwd.value = ''

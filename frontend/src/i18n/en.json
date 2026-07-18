@@ -129,7 +129,8 @@
       "savePassword": "Save Password",
       "saveFields": "Save Fields",
       "passwordMismatch": "Passwords do not match",
-      "savedSuccess": "Saved successfully"
+      "savedSuccess": "Saved successfully",
+      "passwordTooShort": "Password must be at least 6 characters"
     }
   },
   "common": {

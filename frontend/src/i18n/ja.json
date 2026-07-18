@@ -129,7 +129,8 @@
       "savePassword": "パスワードを保存",
       "saveFields": "フィールド設定を保存",
       "passwordMismatch": "パスワードが一致しません",
-      "savedSuccess": "保存しました"
+      "savedSuccess": "保存しました",
+      "passwordTooShort": "パスワードは6文字以上必要です"
     }
   },
   "common": {
