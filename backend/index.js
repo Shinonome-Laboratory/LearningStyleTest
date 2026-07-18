@@ -22,16 +22,14 @@ const PORT = process.env.PORT || 3000
 async function restoreFromCSV() {
   const rows = readAll()
   if (!rows.length) return
-  let restored = 0
-  for (const row of rows) {
-    const exists = await db('respondents').where({ id: row.id }).first()
-    if (!exists) {
-      await db('respondents').insert(row)
-      restored++
-    }
-  }
-  if (restored > 0) {
-    console.log(`[zh] 已从 CSV 恢复 ${restored} 条记录 | [en] Restored ${restored} records from CSV`)
+  // zh: 一次查出已有 id，批量插入缺失记录，避免逐行往返数据库
+  // en: Fetch existing ids once and batch-insert missing rows (no per-row round trips)
+  // ja: 既存 id を一括取得し、不足レコードをバッチ挿入する（1行ずつの往復を回避）
+  const existing = new Set((await db('respondents').select('id')).map(r => r.id))
+  const missing = rows.filter(row => row.id && !existing.has(row.id))
+  if (missing.length) {
+    await db.batchInsert('respondents', missing, 50)
+    console.log(`[zh] 已从 CSV 恢复 ${missing.length} 条记录 | [en] Restored ${missing.length} records from CSV`)
   }
 }
 
@@ -58,8 +56,15 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' })
 })
 
-restoreFromCSV().then(() => {
-  app.listen(PORT, () => {
-    console.log(`[zh] 服务已启动 | [en] Server running | [ja] サーバー起動 → http://localhost:${PORT}`)
+restoreFromCSV()
+  .catch(err => {
+    // zh: CSV 回填失败不应阻止服务启动
+    // en: A failed CSV restore must not block server startup
+    // ja: CSV 復元の失敗でサーバー起動を妨げない
+    console.error('[restoreFromCSV]', err)
   })
-})
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`[zh] 服务已启动 | [en] Server running | [ja] サーバー起動 → http://localhost:${PORT}`)
+    })
+  })
