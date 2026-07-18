@@ -14,6 +14,13 @@ import subprocess
 import sys
 import os
 
+# zh: Windows GBK 控制台无法打印 ✅ 等字符，强制 stdout/stderr 使用 UTF-8
+# en: Windows GBK consoles cannot print chars like ✅ — force UTF-8 output
+# ja: Windows の GBK コンソールは ✅ などを出力できないため UTF-8 を強制する
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(encoding="utf-8", errors="replace")
+
 # zh: 脚本所在目录（code/）
 # en: Directory of this script (code/)
 # ja: このスクリプトのディレクトリ（code/）

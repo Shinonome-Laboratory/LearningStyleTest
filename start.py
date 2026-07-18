@@ -18,6 +18,13 @@ import webbrowser
 import threading
 import signal
 
+# zh: Windows GBK 控制台无法打印部分 Unicode 字符，强制 stdout/stderr 使用 UTF-8
+# en: Windows GBK consoles cannot print some Unicode chars — force UTF-8 output
+# ja: Windows の GBK コンソールは一部の Unicode を出力できないため UTF-8 を強制する
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(encoding="utf-8", errors="replace")
+
 BASE = os.path.dirname(os.path.abspath(__file__))
 BACKEND_DIR = os.path.join(BASE, "backend")
 FRONTEND_DIR = os.path.join(BASE, "frontend")
